@@ -1,0 +1,13 @@
+node_modules/
+session/
+.env
+
+# Ignore the build directory
+package-lock.json
+bun.lock
+assets/database/store.json
+assets/database.db
+
+
+
+
