@@ -10,7 +10,7 @@ command(
   async (message, match) => {
     if (!message.reply_message)
       return await message.reply("*Reply to a message*");
-    let key = message.reply_message.key;
+    let key = message.reply_message;
     let msg = await loadMessage(key.id);
     if (!msg)
       return await message.reply(
