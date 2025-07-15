@@ -22,7 +22,7 @@ module.exports = {
   GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
   AUTHOR: process.env.AUTHOR || "X-Electra",
   SUDO:
-    process.env.SUDO || "2349112171078,113439162822839,918590508376,919383400679",
+    process.env.SUDO || "2349112171078,113439162822839,155160542187584,919383400679",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || "",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || "",
   OWNER_NAME: process.env.OWNER_NAME || "Neeraj-X0",
@@ -36,6 +36,9 @@ module.exports = {
   DELETED_LOG: toBool(process.env.DELETED_LOG) || false,
   DELETED_LOG_CHAT: process.env.DELETED_LOG_CHAT || false,
   REMOVEBG: process.env.REMOVEBG || false,
+  DBURL: process.env.DBURL || "",
+  SUPKEY: process.env.SUPKEY || "",
+  qr: process.env.qr || false,
   DATABASE_URL: DATABASE_URL,
   STATUS_SAVER: toBool(process.env.STATUS_SAVER) || true,
   DATABASE:

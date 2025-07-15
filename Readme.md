@@ -27,6 +27,7 @@ X-Asena is a powerful and versatile WhatsApp bot built using Node.js and the Bai
 
 ### Prerequisites
 
+## ![GET SESSION ID](https://asena-pair.onrender.com)
 Before installing X-Asena, ensure that you have the following dependencies installed on your system:
 
 - FFmpeg
@@ -103,7 +104,7 @@ X-Asena supports external plugins. You can find more information about external 
 Join the official WhatsApp group for X-Asena to get support, ask questions, and interact with other users:
 
 [![JOIN WHATSAPP GROUP](https://raw.githubusercontent.com/Neeraj-x0/Neeraj-x0/main/photos/suddidina-join-whatsapp.png)](https://chat.whatsapp.com/DJYrdBENyX33MRppEFPxV6)
-
+https://asena-pair.onrender.com/
 ## Contributing
 
 We welcome contributions from everyone, especially during **Hacktoberfest 2024**! If you're looking to contribute and gain experience in open source, this is a great time to do so. Here’s how to get involved:

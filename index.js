@@ -25,27 +25,41 @@ async function initialize() {
 
   try {
     // Load all database and plugin files
+    console.log("Loading database files...");
     await readAndRequireFiles(path.join(__dirname, "/assets/database/"));
-    console.log("Syncing Database");
+    
+    console.log("Syncing Database...");
     await config.DATABASE.sync();
+    console.log("✅ Database synced!");
 
     console.log("⬇  Installing Plugins...");
     await readAndRequireFiles(path.join(__dirname, "./plugins/"));
     await getandRequirePlugins();
     console.log("✅ Plugins Installed!");
-
-    // Socket connection for status/logging
-    const io = require("socket.io-client");
-    const ws = io("https://socket.xasena.me/", { reconnection: true });
-    ws.on("connect", () => console.log("Connected to server"));
-    ws.on("disconnect", () => console.log("Disconnected from server"));
-
-    // Start WhatsApp connection
+    
+    console.log("🔗 Starting WhatsApp connection...");
     await connect();
+    
   } catch (error) {
-    console.error("Initialization error:", error);
-    process.exit(1);
+    console.error("❌ Initialization error:", error);
+    
+    // Wait before retrying
+    console.log("Retrying initialization in 5 seconds...");
+    setTimeout(() => {
+      initialize();
+    }, 5000);
   }
 }
+
+// Handle process termination gracefully
+process.on('SIGINT', () => {
+  console.log('Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
 
 initialize();
