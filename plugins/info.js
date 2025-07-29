@@ -1,5 +1,5 @@
 const { fromBuffer, mimeTypes } = require("file-type");
-const { command, isPrivate } = require("../lib/");
+const { command, isPrivate } = require("../lib");
 command(
   {
     pattern: "ping",
@@ -17,3 +17,5 @@ command(
     );
   }
 );
+
+
